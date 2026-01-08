@@ -1,0 +1,40 @@
+# 忽略所有文件
+*
+
+# 允许上传的代码目录结构
+!*/
+!src/
+!src/**
+!*.java
+!*.sql
+!*.txt
+!*.md
+!.gitignore
+
+# --------------------------------------------------
+# 严格禁止泄露的文件 (即便在 src 下也强制忽略)
+# --------------------------------------------------
+# 排除所有配置文件（含 DB 密码、密钥等）
+**/resources/*.yml
+**/resources/*.yaml
+**/resources/*.properties
+**/resources/*.xml
+
+# 排除 Maven 核心定义，防止依赖关系泄露
+pom.xml
+
+# 排除 IDE 痕迹
+.idea/
+.vscode/
+*.iml
+*.class
+target/
+bin/
+
+# 排除日志文件
+*.log
+logs/
+
+# 排除 OS 临时文件
+.DS_Store
+Thumbs.db
